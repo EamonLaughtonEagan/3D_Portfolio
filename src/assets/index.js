@@ -21,8 +21,9 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import chakra from "./tech/chakra.png";
-import framerMotion from "./tech/framerMotion.jpg";
+import motion from "./tech/framerMotion.jpg";
 import nginx from "./tech/nginx.png";
+import sql from "./tech/sql.jpg";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -59,8 +60,9 @@ export {
   typescript,
   threejs,
   chakra,
-  framerMotion,
+  motion,
   nginx,
+  sql,
   meta,
   shopify,
   healthCanada,

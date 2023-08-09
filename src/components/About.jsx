@@ -34,10 +34,11 @@ const About = () => {
       </motion.div>
       <motion.p variants={fadeIn('', '', 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
-        I am a talented software developer with experience in Javascript and
-        Typescript, expertise in frameworks like React. I am quick to learn and
-        will work closely and diligently with clients in order to have your ideas
-        become a reality.
+        I am a passionate and creative software developer with experience in Javascript and
+        Typescript, expertise in frameworks like React. I am flexible and quick to learn. 
+        I truly enjoy working closely with clients in order to have their ideas come to fruition in a timely fashion.
+
+
       </motion.p>
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, i) => (
