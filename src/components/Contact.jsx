@@ -22,32 +22,42 @@ const Contact = () => {
   }
   const handleSubmit = (e) => {
     e.preventDefault()
-    setLoading(true)
-
-    emailjs.send(
-      'service_tjna4bk', 
-      'template_1slo0ik', 
-      {
-        from_name: form.name,
-        to_name: 'My Name',
-        from_email: form.email,
-        to_email: 'eamonlaughtoneagan@gmail.com',
-        message: form.message,
-      },
-      '-ZcePI2czEFpfRYUz',
-    ).then(() => {
-      setLoading(false)
-      alert('Thank you! I will get back to you as soon as possible')
-      setForm({
-        name: '',
-        email: '',
-        message: '',
-      })
-    }, (error) => {
-      setLoading(false)
-      console.log(error)
-      alert('Something went wrong.')
+    let isValid = true
+    const textAreas = e.target.querySelectorAll('textarea')
+    textAreas.forEach((textArea) => {
+      if (!textArea.value.trim()) {
+        isValid = false
+        alert('Please fill out every field.')
+      }
     })
+    if (isValid) {
+      setLoading(true)
+  
+      emailjs.send(
+        'service_tjna4bk', 
+        'template_1slo0ik', 
+        {
+          from_name: form.name,
+          to_name: 'My Name',
+          from_email: form.email,
+          to_email: 'eamonlaughtoneagan@gmail.com',
+          message: form.message,
+        },
+        '-ZcePI2czEFpfRYUz',
+      ).then(() => {
+        setLoading(false)
+        alert('Thank you! I will get back to you as soon as possible')
+        setForm({
+          name: '',
+          email: '',
+          message: '',
+        })
+      }, (error) => {
+        setLoading(false)
+        console.log(error)
+        alert('Something went wrong.')
+      })
+    }
   }
 
   return (
