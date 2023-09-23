@@ -218,7 +218,7 @@ import {
         },
       ],
       image: portfolio,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/EamonLaughtonEagan/3D_Portfolio",
     },
   ];
   

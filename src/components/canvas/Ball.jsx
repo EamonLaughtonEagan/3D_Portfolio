@@ -29,35 +29,6 @@ const Ball = (props) => {
 }
 
 const BallCanvas = ({ icon }) => {
-  const [isInViewport, setIsInViewport] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const element = document.getElementById('ball')
-      if (!element) return
-
-      const rect = element.getBoundingClientRect()
-
-      // check if element is in the viewport
-      const inViewport = (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= window.innerHeight &&
-        rect.right <= window.innerWidth
-      )
-      setIsInViewport(inViewport)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    handleScroll() // initial check
-
-    // clean up the event listener and unmount the component
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-
-  }, [])
-
 
   return (
     <>
