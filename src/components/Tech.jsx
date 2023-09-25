@@ -8,7 +8,7 @@ import Tilt from 'react-parallax-tilt'
 
 const TechCard = ({index, name, icon}) => {
   return (
-    <Tilt className='sm:w-[350px] w-full'>
+    <Tilt className='xs:w-[250px] w-[235px]'>
       <motion.div 
       variants={fadeIn('right', 'spring', 0.1 * index, 0.75)}
       className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'>
@@ -31,7 +31,7 @@ const Tech = () => {
       <p className={styles.sectionSubText}>Known Technologies</p>
       <h2 className={styles.sectionHeadText}>Technologies.</h2>
     </motion.div>
-    <div className='mt-20 flex flex-wrap gap-10'>
+    <div className='mt-20 flex flex-wrap gap-10 xs:justify-center'>
       {technologies.map((tech, i) => (
         <TechCard key={tech.name} index={i} {...tech} />
       ))}
